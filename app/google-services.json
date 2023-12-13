@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "890986480690",
+    "project_id": "omsaravanabhavanhotel-edf79",
+    "storage_bucket": "omsaravanabhavanhotel-edf79.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890986480690:android:3743857063e54adb46a82b",
+        "android_client_info": {
+          "package_name": "com.example.osbapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsg4pRM_dj3qWZDr5mW7MZFs5Sg5kcuOo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

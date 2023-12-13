@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.example.osbapplication.employeesPage.EmployeesPageViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".employeesPage.EmployeesPageActivity"
+        android:background="@color/white">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rl_emp_top_view_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:elevation="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/app_color_light_bottom_round">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_emp_header_holder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="15dp">
+
+                        <ImageView
+                            android:id="@+id/iv_emp_page_header_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true"
+                            android:contentDescription="@string/home_page_header_image"
+                            android:src="@drawable/food_bowl_closed"/>
+
+                        <TextView
+                            android:id="@+id/tv_header_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_toEndOf="@id/iv_emp_page_header_icon"
+                            style="@style/home_heading_sac_24_app_dark"
+                            android:text="@string/om"/>
+
+                        <TextView
+                            android:id="@+id/tv_header_text_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            style="@style/home_heading_16_app_dark"
+                            android:layout_toEndOf="@id/iv_emp_page_header_icon"
+                            android:layout_below="@+id/tv_header_text"
+                            android:text="@string/saravana_bhavan"/>
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginVertical="25dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:gravity="center"
+                        android:layout_below="@id/rl_emp_header_holder">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:layout_marginVertical="8dp"
+                            android:layout_marginHorizontal="15dp"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center_vertical"
+                            android:padding="5dp"
+                            android:background="@drawable/white_color_round"
+                            android:elevation="5dp">
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:orientation="vertical"
+                                android:padding="5dp"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/body_semi_bold_14_dark"
+                                    android:text="@{viewModel.totalEmployeeCount}"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/body_regular_12_black"
+                                    android:text="@string/total"/>
+
+                            </LinearLayout>
+
+
+                            <View
+                                android:layout_width="1dp"
+                                android:background="@color/grey_out"
+                                android:layout_marginVertical="5dp"
+                                android:layout_marginHorizontal="2dp"
+                                android:layout_height="match_parent"/>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:orientation="vertical"
+                                android:padding="5dp"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/body_semi_bold_14_dark"
+                                    android:text="@{viewModel.maleEmployeeCount}"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/body_regular_12_black"
+                                    android:text="@string/men"/>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:background="@color/grey_out"
+                                android:layout_marginVertical="5dp"
+                                android:layout_marginHorizontal="2dp"
+                                android:layout_height="match_parent"/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:orientation="vertical"
+                                android:padding="5dp"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/body_semi_bold_14_dark"
+                                    android:text="@{viewModel.femaleEmployeeCount}"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/body_regular_12_black"
+                                    android:text="@string/women"/>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:minHeight="100dp"
+                            android:maxHeight="100dp"
+                            android:padding="2dp"
+                            android:scaleType="centerInside"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginVertical="3dp"
+                            android:contentDescription="@string/emp_page_cook_image"
+                            android:src="@drawable/employees"/>
+
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/rl_emp_top_view_holder">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/employees"
+                        style="@style/body_regular_12_black"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginHorizontal="15dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rv_employees"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"/>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fb_skill_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/app_color_dark"
+                android:src="@drawable/add"
+                android:onClick="@{viewModel::addEmployee}"
+                app:borderWidth="0dp"
+                android:shadowRadius="5"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:contentDescription="@string/add_button" />
+
+        </FrameLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

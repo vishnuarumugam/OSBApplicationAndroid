@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_start_up"
+    app:startDestination="@id/mainActivity">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.osbapplication.base.MainActivity"
+        android:label="Main Activity">
+        <!-- Add any arguments or deep links if needed -->
+    </activity>
+
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.osbapplication.loginPage.LoginActivity"
+        android:label="Login Activity">
+
+        <!-- Add any arguments or deep links if needed -->
+    </activity>
+
+    <activity
+        android:id="@+id/homePageActivity"
+        android:name="com.example.osbapplication.homePage.HomePageActivity"
+        android:label="Home Page Activity">
+
+    </activity>
+
+
+    <action
+        android:id="@+id/loginAction"
+        app:destination="@+id/homePageActivity" />
+</navigation>
